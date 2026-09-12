@@ -1,0 +1,25 @@
+---
+title: "Engineering Reliable Public-Sector Information Systems"
+publishedAt: "2026-08-26"
+updatedAt: "2026-08-26"
+author: "Adam Essaidi"
+summary: "Practical lessons from building full-stack applications and information systems for Moroccan public institutions."
+---
+
+Reliable information systems begin with a clear understanding of the people, workflows, and data they support. In public-sector projects, a small technical decision can affect many users and several connected systems, so maintainability matters as much as feature delivery.
+
+## Design around clear boundaries
+
+I separate business rules, API contracts, persistence, and user-interface concerns. This makes services easier to test and allows frontend and backend teams to work against stable REST APIs. Depending on the project, I use ASP.NET Core or Spring Boot for backend services and Angular or React for the interface.
+
+## Treat data as a system responsibility
+
+Projects involving SQL Server, PostgreSQL, and Oracle require deliberate data ownership and synchronization rules. I focus on predictable schemas, traceable transformations, and careful handling of integrations between databases.
+
+## Debug the complete flow
+
+Complex issues rarely belong to a single layer. My debugging process follows a request from the browser through the API, business logic, and database. Measuring each stage helps separate correctness problems from performance bottlenecks.
+
+## Build for the next change
+
+Good architecture is not about adding layers for their own sake. It is about making the next requirement safer to implement. Clear boundaries, observable behavior, and straightforward deployment practices help a system evolve without losing reliability.
