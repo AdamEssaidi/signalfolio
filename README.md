@@ -51,9 +51,10 @@ pnpm start
 
 ## Site URL
 
-Copy `.env.example` to `.env.local` and set `NEXT_PUBLIC_SITE_URL` to the
-deployed site URL before publishing. This value is used for canonical links,
-Open Graph metadata, the sitemap, and `robots.txt`.
+For local development, copy `.env.example` to `.env.local` when you want to
+override the site URL. Vercel detects its production URL automatically; set
+`NEXT_PUBLIC_SITE_URL` only when using a custom domain. This value is used for
+canonical links, Open Graph metadata, the sitemap, and `robots.txt`.
 
 ## Quality checks
 

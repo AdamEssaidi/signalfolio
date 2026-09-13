@@ -6,8 +6,15 @@ import { Postgresql } from "@/components/ui/svgs/postgresql";
 import { ReactLight } from "@/components/ui/svgs/reactLight";
 import { HomeIcon, NotebookIcon } from "lucide-react";
 
+const configuredSiteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim();
+const vercelProductionHost =
+  process.env.VERCEL_PROJECT_PRODUCTION_URL?.trim();
+
 const SITE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"
+  configuredSiteUrl ||
+  (vercelProductionHost
+    ? `https://${vercelProductionHost}`
+    : "http://localhost:3000")
 ).replace(/\/$/, "");
 
 export const DATA = {
